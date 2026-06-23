@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeVector - 200K Products</title>
+    <!-- Use Inter font for a modern look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <div class="header-content">
+                <h1>CodeVector <span>Store</span></h1>
+                <div class="filters">
+                    <label for="category-filter">Category:</label>
+                    <select id="category-filter">
+                        <option value="All">All Categories</option>
+                    </select>
+                </div>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div class="stats-bar">
+                <p id="stats-text">Loading...</p>
+                <button id="add-mock-data-btn" class="secondary-btn" title="Simulate 50 items added concurrently to test pagination stability">Simulate 50 New Arrivals</button>
+            </div>
+            
+            <div class="product-grid" id="product-grid">
+                <!-- Products will be injected here -->
+            </div>
+            
+            <div id="loading-spinner" class="spinner-container">
+                <div class="spinner"></div>
+                <p>Loading more products...</p>
+            </div>
+            
+            <div id="end-message" class="hidden">
+                <p>You've reached the end of the catalog.</p>
+            </div>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
